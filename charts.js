@@ -169,19 +169,19 @@ const { useMemo } = React;
 			this.renderGraphs();
         }
 
-		async componentDidMount(){
-			var epDataArr = [];
-			const upResponse = await fetch(EPfile);
-			const epData = await upResponse.text();
-			epDataArr = epData.split('\n');
-            epDataArr.slice(1,epDataArr.length).forEach(x => {
-                var row = x.split(";");
-                var sum = 0;
-                row.slice(1, row.length).forEach(r => {
-                    sum += parseInt(r);
-                });
-                this.state.officialFeesEP.push(sum);
-            });
+async componentDidMount(){
+	var epDataArr = [];
+	const upResponse = await fetch(EPfile);
+	const epData = await upResponse.text();
+	epDataArr = epData.split('\n');
+    	epDataArr.slice(1,epDataArr.length).forEach(x => {
+		var row = x.split(";");
+		var sum = 0;
+		row.slice(1, row.length).forEach(r => {
+		    sum += parseInt(r);
+		});
+		this.state.officialFeesEP.push(sum);
+	    });
 
             const countries = epDataArr[0].split(";");
             this.setState({countries: countries.slice(1,countries.length)});
@@ -202,9 +202,9 @@ const { useMemo } = React;
             this.renderGraphs();
 		}
 
-		render() {
+	render() {
             return (
-				<div className="row justify-content-center">
+		<div className="row justify-content-center">
                     <div className="col-9">
                         <div className="row" style={{color:"black", display:"flex", backgroundColor:"#e0e0e0"}}>
                             <div className="col-3" style={{}}>
@@ -292,8 +292,8 @@ const { useMemo } = React;
                     </div>
                   </div>
                 </div>
-			);
-		}
+		);
 	}
+}
 
-	ReactDOM.createRoot(document.getElementById('app')).render(<App/>);
+ReactDOM.createRoot(document.getElementById('app')).render(<App/>);
