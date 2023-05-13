@@ -1,4 +1,4 @@
-import {renderGraphs} from "./charts.js";
+import {test, renderGraphs} from "./charts.js";
 console.log("this works");
 
-renderGraphs();
+test();
