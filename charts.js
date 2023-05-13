@@ -4,6 +4,8 @@ export function test(){
 
 export function renderGraphs(){
 
+	console.log("works");
+	
 	//Bar chart
 	const root = document.getElementById("chartRoot");
     	const chart1 = document.getElementById("myChart");
