@@ -1,3 +1,7 @@
+export function test(){
+	console.log("test import werkt")
+}
+
 export function renderGraphs(){
 
 	//Bar chart
