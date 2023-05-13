@@ -1,9 +1,3 @@
-const { useMemo } = React;
-	const {	createRoot } = ReactDOM;
-
-const EPfile = "https://uploads-ssl.webflow.com/644d046850a16273b5c7ddbd/645bb8061d7593c3f7dc083b_EP.csv";
-const UPfile = "https://uploads-ssl.webflow.com/644d046850a16273b5c7ddbd/645bc7ca2d1c275c9bedf58c_UP.csv";
-
 export function renderGraphs(){
 
 	//Bar chart
