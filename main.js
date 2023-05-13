@@ -1,4 +1,1 @@
-import test from "./charts.js";
-console.log("this works");
-
-test();
+console.log("export scripts don't work");
