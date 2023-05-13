@@ -1,2 +1,2 @@
 
-console.debug("this works")
+console.log("this works");
